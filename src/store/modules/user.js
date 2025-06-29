@@ -50,9 +50,9 @@ const user = {
       const username = userInfo.username.trim()
       const password = userInfo.password
       const captchaCode = userInfo.captchaCode
-      const uuid = userInfo.uuid
+      const id = userInfo.id
       return new Promise((resolve, reject) => {
-        login(username, password, captchaCode, uuid).then(res => {
+        login(username, password, captchaCode, id).then(res => {
           setToken(res.data.token)
           commit('SET_TOKEN', res.data.token)
           resolve()

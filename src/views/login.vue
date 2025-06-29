@@ -87,7 +87,7 @@ export default {
         password: "888888",
         rememberMe: false,
         captchaCode: "",
-        uuid: ""
+        id: ""
       },
       loginRules: {
         username: [
@@ -128,7 +128,7 @@ export default {
       const app = this
       getCodeImg().then(response => {
         app.codeUrl = response.data.captcha
-        app.loginForm.uuid = response.data.uuid
+        app.loginForm.id = response.data.id
       })
     },
     getCookie() {
@@ -139,7 +139,7 @@ export default {
         username: username === undefined ? this.loginForm.username : username,
         password: password === undefined ? this.loginForm.password : decrypt(password),
         rememberMe: rememberMe === undefined ? false : Boolean(rememberMe),
-        uuid: this.loginForm.uuid
+        id: this.loginForm.id
       };
     },
     handleLogin() {

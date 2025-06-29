@@ -1,6 +1,14 @@
 import request from '@/utils/request'
 
-// 登录方法
+// 获取验证码
+export function getCodeImg() {
+  return request({
+    url: 'passport/captcha',
+    method: 'get'
+  })
+}
+
+// 用户登录
 export function login(username, password, captchaCode, uuid) {
   const data = {
     username,
@@ -18,6 +26,8 @@ export function login(username, password, captchaCode, uuid) {
   })
 }
 
+/////////////////////////////////////////////////////////////////////////
+
 // 获取用户详细信息
 export function getInfo() {
   return request({
@@ -31,13 +41,5 @@ export function logout() {
   return request({
     url: 'backendApi/login/logout',
     method: 'post'
-  })
-}
-
-// 获取验证码
-export function getCodeImg() {
-  return request({
-    url: 'clientApi/captcha/getCode',
-    method: 'get'
   })
 }

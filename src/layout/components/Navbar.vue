@@ -37,7 +37,7 @@ import Hamburger from '@/components/Hamburger'
 import Screenfull from '@/components/Screenfull'
 import SizeSelect from '@/components/SizeSelect'
 import Search from '@/components/HeaderSearch'
-import FuintDoc from '@/components/Fuint/Doc'
+import FuintDoc from '@/components/Goldmine/Doc'
 
 export default {
   components: {
