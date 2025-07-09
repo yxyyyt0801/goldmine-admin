@@ -37,7 +37,6 @@ import Hamburger from '@/components/Hamburger'
 import Screenfull from '@/components/Screenfull'
 import SizeSelect from '@/components/SizeSelect'
 import Search from '@/components/HeaderSearch'
-import FuintDoc from '@/components/Goldmine/Doc'
 
 export default {
   components: {
@@ -46,8 +45,7 @@ export default {
     Hamburger,
     Screenfull,
     SizeSelect,
-    Search,
-    FuintDoc
+    Search
   },
   computed: {
     ...mapGetters([

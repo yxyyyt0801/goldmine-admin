@@ -3,21 +3,21 @@ import request from '@/utils/request'
 // 获取验证码
 export function getCodeImg() {
   return request({
-    url: 'passport/captcha',
+    url: 'admin/captcha/code',
     method: 'get'
   })
 }
 
 // 用户登录
-export function login(username, password, captchaCode, uuid) {
+export function login(username, password, captchaCode, id) {
   const data = {
     username,
     password,
     captchaCode,
-    uuid
+    id
   }
   return request({
-    url: 'backendApi/login/doLogin',
+    url: 'admin/account/login',
     headers: {
       isToken: false
     },

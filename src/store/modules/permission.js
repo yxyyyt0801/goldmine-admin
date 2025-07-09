@@ -26,7 +26,7 @@ const permission = {
     },
     SET_SIDEBAR_ROUTERS: (state, routes) => {
       state.sidebarRouters = routes
-    },
+    }
   },
   actions: {
     // 生成路由
@@ -36,11 +36,11 @@ const permission = {
         getRouters().then(res => {
           const sdata = JSON.parse(JSON.stringify(res.data))
           const rdata = JSON.parse(JSON.stringify(res.data))
-          const sidebarRoutes = filterAsyncRouter(sdata)
+          const sidebarRoutes = filterAsyncRouter(sdata)  // sidebar路由
           const rewriteRoutes = filterAsyncRouter(rdata, false, true)
-          const asyncRoutes = filterDynamicRoutes(dynamicRoutes);
+          const asyncRoutes = filterDynamicRoutes(dynamicRoutes)
           rewriteRoutes.push({ path: '*', redirect: '/404', hidden: true })
-          router.addRoutes(asyncRoutes);
+          router.addRoutes(asyncRoutes)
           commit('SET_ROUTES', rewriteRoutes)
           commit('SET_SIDEBAR_ROUTERS', constantRoutes.concat(sidebarRoutes))
           commit('SET_DEFAULT_ROUTES', sidebarRoutes)

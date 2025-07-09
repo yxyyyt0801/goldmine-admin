@@ -74,7 +74,7 @@
 <script>
 import {getCodeImg} from "@/api/login";
 import Cookies from "js-cookie";
-import {encrypt, decrypt} from '@/utils/jsencrypt'
+import {encrypt, decrypt} from '@/utils/jsencrypt'  // 对 cookie 密码进行非对称加密
 
 export default {
   name: "Login",
@@ -83,7 +83,7 @@ export default {
       codeUrl: "",
       systemName: process.env.VUE_APP_TITLE,
       loginForm: {
-        username: "00001",
+        username: "admin",
         password: "888888",
         rememberMe: false,
         captchaCode: "",

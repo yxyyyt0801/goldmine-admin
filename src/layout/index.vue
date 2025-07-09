@@ -16,10 +16,9 @@
 </template>
 
 <script>
-import RightPanel from '@/components/RightPanel'
-import {AppMain, Navbar, Settings, Sidebar, TagsView} from './components'
+import { AppMain, Navbar, Settings, Sidebar, TagsView, RightPanel } from './components'
 import ResizeMixin from './mixin/ResizeHandler'
-import {mapState} from 'vuex'
+import { mapState } from 'vuex'
 import variables from '@/assets/styles/variables.scss'
 
 export default {
@@ -51,12 +50,12 @@ export default {
       }
     },
     variables() {
-      return variables;
+      return variables
     }
   },
   methods: {
     handleClickOutside() {
-      this.$store.dispatch('app/closeSideBar', {withoutAnimation: false})
+      this.$store.dispatch('app/closeSideBar', { withoutAnimation: false })
     }
   }
 }

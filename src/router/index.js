@@ -28,7 +28,7 @@ import Layout from '@/layout'
  }
  */
 
-// 公共路由
+// 静态路由
 export const constantRoutes = [
   {
     path: '/redirect',
@@ -85,7 +85,7 @@ export const constantRoutes = [
   }
 ]
 
-// 动态路由，基于用户权限动态去加载
+// 动态路由，基于用户权限动态加载
 export const dynamicRoutes = []
 
 // 防止连续点击多次路由报错
